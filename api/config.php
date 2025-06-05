@@ -1,9 +1,9 @@
 <?php
 // Database configuration
-$servername = "sql108.infinityfree.com";  // Your server name (usually localhost)
-$username = "if0_38272387";  // Your database username
-$password = "pupchat1";  // Your database password
-$dbname = "if0_38272387_LoginApp";  // Your database name
+$servername = "🌹";  // Your server name (usually localhost)
+$username = "🥀";  // Your database username
+$password = "😄";  // Your database password
+$dbname = "😄";  // Your database name
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -26,10 +26,10 @@ if (!function_exists('sanitize_input')) {
 }
 ?><?php
 // Database configuration
-$servername = "sql108.infinityfree.com";  // Your server name (usually localhost)
-$username = "if0_38272387";  // Your database username
-$password = "pupchat1";  // Your database password
-$dbname = "if0_38272387_LoginApp";  // Your database name
+$servername = "🌹";  // Your server name (usually localhost)
+$username = "😚";  // Your database username
+$password = "🙌";  // Your database password
+$dbname = "❣️";  // Your database name
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
