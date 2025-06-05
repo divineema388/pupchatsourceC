@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b, #1b1b1b);
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glow 2s infinite alternate;
+}
+
+.sub-heading {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+/* Highlight */
+.highlight {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* Typing Effect */
+.typing {
+    display: inline-block;
+    font-size: 1.3rem;
+    border-right: 3px solid white;
+    padding-right: 5px;
+    animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+/* Pen Animation */
+.pen-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: penMotion 3s infinite ease-in-out;
+}
+
+.pen {
+    width: 30px;
+    height: 30px;
+    background: black;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    animation: penWrite 1.5s infinite alternate;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+}
+
+.email {
+    color: #ffeb3b;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b;
+    }
+    to {
+        text-shadow: 0 0 20px #ff9800, 0 0 30px #ff9800, 0 0 40px #ff9800;
+    }
+}
+
+@keyframes penMotion {
+    0% {
+        bottom: 50px;
+    }
+    50% {
+        bottom: 70px;
+    }
+    100% {
+        bottom: 50px;
+    }
+}
+
+@keyframes penWrite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PupChat - The Social Network for Dog Lovers</title>
+    
+    <!-- Use the same styling as index.php for consistency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD166;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --gray: #6C757D;
+            --light-gray: #E9ECEF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #7b74ff 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .back-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .back-btn:hover {
+            transform: translateX(-3px);
+        }
+        
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('assets/about-bg.jpg') no-repeat center center/cover;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .about-hero-content h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .about-hero-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .about-content h2 {
+            font-family: 'Fredoka One', cursive;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .about-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .team-section {
+            text-align: center;
+            margin: 5rem 0;
+        }
+        
+        .team-section h2 {
+            font-family: 'Fredoka One', cursive;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light-gray);
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+        
+        .team-member h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-member p.position {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .team-member p.bio {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #7b74ff 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 16px;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .mission-section h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mission-section p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .mission-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links-footer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links-footer a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .copyright a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 992px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .team-section h2,
+            .mission-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.php" class="logo">
+                <i class="fas fa-paw"></i> PupChat
+            </a>
+            <button onclick="window.location.href='index.php'" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+    </header>
+    
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Our Paw-some Story</h1>
+            <p class="animate__animated animate__fadeInUp">Connecting dog lovers worldwide, one wag at a time</p>
+        </div>
+    </section>
+    
+    <div class="about-container">
+        <section class="about-section animate__animated animate__fadeIn">
+            <div class="about-content">
+                <h2>How PupChat Began</h2>
+                <p>PupChat was founded in 2022 by a group of dog enthusiasts who noticed a gap in the social media landscape. While there were platforms for general social networking, none focused specifically on the needs and interests of dog owners and lovers.</p>
+                <p>What started as a small community of local dog owners sharing photos and meetup information has grown into a vibrant global network with thousands of active users.</p>
+                <p>Our mission is simple: to create a safe, friendly space where dog lovers can connect, share, and learn from each other.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/about-story.jpg" alt="Founders with their dogs">
+            </div>
+        </section>
+        
+        <section class="about-section animate__animated animate__fadeIn">
+            <div class="about-image">
+                <img src="assets/about-features.jpg" alt="PupChat features">
+            </div>
+            <div class="about-content">
+                <h2>What Makes Us Different</h2>
+                <p>Unlike other social networks, PupChat is designed specifically for dog lovers. Every feature is tailored to enhance the experience of sharing your dog's life and connecting with other canine enthusiasts.</p>
+                <p>From breed-specific groups to local dog park meetups, health and training tips to photo contests, we've built a platform that celebrates everything about our furry friends.</p>
+                <p>Our strict content moderation ensures a positive environment free from the negativity often found on other platforms.</p>
+            </div>
+        </section>
+        
+        <section class="mission-section animate__animated animate__fadeIn">
+            <h2>Our Mission</h2>
+            <p>To create the world's most engaged community of dog lovers, where every member feels welcome to share their passion, knowledge, and love for dogs.</p>
+            
+            <div class="mission-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Happy Users</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Dog Breeds</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="team-section animate__animated animate__fadeIn">
+            <h2>Meet The Team</h2>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="assets/team1.jpg" alt="Divine Ema Asuquo">
+                    <h3>Divine Ema Asuquo</h3>
+                    <p class="position">Founder & Lead Developer</p>
+                    <p class="bio">Dog lover and tech enthusiast who combined his two passions to create PupChat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets/team2.jpg" alt="Sarah Johnson">
+                    <h3>Sarah Johnson</h3>
+                    <p class="position">Community Manager</p>
+                    <p class="bio">Professional dog trainer who ensures our community remains friendly and helpful.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets/team3.jpg" alt="Michael Chen">
+                    <h3>Michael Chen</h3>
+                    <p class="position">UX Designer</p>
+                    <p class="bio">Makes sure every interaction with PupChat is as smooth as a dog's coat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <a href="index.php" class="footer-logo">
+                <i class="fas fa-paw"></i> PupChat
+            </a>
+            <div class="footer-links">
+                <a href="index.php">Home</a>
+                <a href="about.html">About</a>
+                <a href="tc.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links-footer">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">
+                &copy; 2023 PupChat. All rights reserved.<br>
+                Developed by <a href="#">Dev Divine Ema Asuquo</a> | Powered by <a href="https://dealabs.rf.gd" target="_blank">Dealabs</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple back to top button functionality
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.location.href = 'index.php';
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const animateOnScroll = () => {
+                animateElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = 1;
+                    }
+                });
+            };
+            
+            // Initial check
+            animateOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>

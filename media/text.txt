@@ -1,0 +1,29 @@
+/pupchat  
+│── db_connect.php        # Database connection  
+│── home.php              # Main homepage with news feed, search bar, and notifications  
+│── login.php             # User login page  
+│── logout.php            # Logs users out  
+│── signup.php            # User registration page  
+│── recover.php           # Password recovery page  
+│── profile.php           # User profile with bio, profile pic, bots, and unique ID  
+│── edit_profile.php      # Page to edit user profile info  
+│── messages.php          # Displays user and bot messages  
+│── chat.php              # Private messaging between users  
+│── send_message.php      # Handles messaging bots  
+│── group.php             # Group creation and management  
+│── search.php            # Searches users and bots  
+│── bot.php               # Create bots and view bot tokens  
+│── bot_dashboard.php     # Manage bot commands and responses  
+│── bot_login.php         # Login page for bot settings  
+│── bot_settings.php      # Page to update bot commands/responses  
+│── friends.php           # Friend requests management  
+│── feed.php              # Shows posts from friends and public users  
+│── like.php              # Handles liking posts  
+│── comment.php           # Handles adding comments to posts  
+│── send_message.php      # Private messaging system  
+│── adminpage.php         # Admin panel for managing users and bot verification  
+│── media/                # Folder for images and profile pictures  
+│   ├── logo.png          # PupChat logo  
+│   ├── default_profile.png  # Default profile picture  
+│── styles/               # External stylesheets (if used, but currently embedded in PHP)  
+│── scripts/              # External JS files (if needed, but currently embedded in PHP)

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PupChat - Terms and Conditions</title>
+    
+    <!-- Use the same styling as index.php for consistency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --gray: #6C757D;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #7b74ff 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: #FFD166; /* Accent color */
+        }
+        
+        .back-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .back-btn:hover {
+            transform: translateX(-3px);
+        }
+        
+        .tc-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .tc-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .tc-header h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tc-header p {
+            color: var(--gray);
+        }
+        
+        .tc-content {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+        }
+        
+        .section p, .section ul {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .section ul {
+            padding-left: 2rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 214, 102, 0.2);
+            padding: 1rem;
+            border-left: 4px solid var(--secondary);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .copyright a {
+            color: #FFD166;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .tc-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.php" class="logo">
+                <i class="fas fa-paw"></i> PupChat
+            </a>
+            <button onclick="window.location.href='index.php'" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+    </header>
+    
+    <main class="tc-container">
+        <div class="tc-header">
+            <h1>Terms and Conditions</h1>
+            <p>Last Updated: January 1, 2023</p>
+        </div>
+        
+        <div class="tc-content">
+            <div class="section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing or using PupChat ("the Service"), you agree to be bound by these Terms and Conditions ("Terms"). If you disagree with any part of the terms, you may not access the Service.</p>
+                
+                <div class="highlight">
+                    <p><strong>Note:</strong> These Terms apply to all visitors, users, and others who access or use the Service.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>2. User Accounts</h2>
+                <p>When you create an account with us, you must provide accurate and complete information. You are responsible for:</p>
+                <ul>
+                    <li>Maintaining the confidentiality of your account and password</li>
+                    <li>All activities that occur under your account</li>
+                    <li>Immediately notifying us of any unauthorized use of your account</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>3. Content Policy</h2>
+                <p>You are responsible for all content you post on PupChat. You agree not to post content that:</p>
+                <ul>
+                    <li>Is unlawful, harmful, threatening, abusive, harassing, defamatory, or otherwise objectionable</li>
+                    <li>Violates any intellectual property rights</li>
+                    <li>Contains software viruses or any other harmful code</li>
+                    <li>Attempts to impersonate another person or entity</li>
+                </ul>
+                <p>We reserve the right to remove any content that violates these Terms.</p>
+            </div>
+            
+            <div class="section">
+                <h2>4. Privacy Policy</h2>
+                <p>Your use of the Service is also governed by our Privacy Policy, which explains how we collect, use, and share your information. By using the Service, you agree to the collection and use of information in accordance with the Privacy Policy.</p>
+            </div>
+            
+            <div class="section">
+                <h2>5. Intellectual Property</h2>
+                <p>The Service and its original content, features, and functionality are and will remain the exclusive property of PupChat and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries.</p>
+            </div>
+            
+            <div class="section">
+                <h2>6. Termination</h2>
+                <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                <p>Upon termination, your right to use the Service will immediately cease.</p>
+            </div>
+            
+            <div class="section">
+                <h2>7. Limitation of Liability</h2>
+                <p>In no event shall PupChat, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+                <ul>
+                    <li>Your access to or use of or inability to access or use the Service</li>
+                    <li>Any conduct or content of any third party on the Service</li>
+                    <li>Any content obtained from the Service</li>
+                    <li>Unauthorized access, use or alteration of your transmissions or content</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>8. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide at least 30 days' notice prior to any new terms taking effect.</p>
+                <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+            </div>
+            
+            <div class="section">
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us at:</p>
+                <p><strong>Email:</strong> legal@pupchat.example.com</p>
+                <p><strong>Address:</strong> 123 Dog Park Avenue, Suite 100, Petsville, PV 12345</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.php">Home</a>
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">
+                &copy; 2023 PupChat. All rights reserved.<br>
+                Developed by <a href="#">Dev Divine Ema Asuquo</a> | Powered by <a href="https://dealabs.rf.gd" target="_blank">Dealabs</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple back to top button functionality
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.location.href = 'index.php';
+        });
+    </script>
+</body>
+</html>

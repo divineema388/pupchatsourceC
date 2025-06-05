@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PupChat</title>
+    
+    <!-- Use the same styling as index.php for consistency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #FFD166;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --gray: #6C757D;
+            --light-gray: #E9ECEF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #7b74ff 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .back-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .back-btn:hover {
+            transform: translateX(-3px);
+        }
+        
+        /* Privacy Policy Specific Styles */
+        .privacy-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .privacy-header h1 {
+            color: var(--primary);
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-header p {
+            color: var(--gray);
+        }
+        
+        .privacy-content {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .privacy-section {
+            margin-bottom: 2rem;
+        }
+        
+        .privacy-section h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+        }
+        
+        .privacy-section p, .privacy-section ul {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .privacy-section ul {
+            padding-left: 2rem;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background-color: rgba(255, 214, 102, 0.2);
+            padding: 1rem;
+            border-left: 4px solid var(--secondary);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .update-date {
+            font-style: italic;
+            color: var(--gray);
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .copyright a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.php" class="logo">
+                <i class="fas fa-paw"></i> PupChat
+            </a>
+            <button onclick="window.location.href='index.php'" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+    </header>
+    
+    <main class="privacy-container">
+        <div class="privacy-header">
+            <h1>Privacy Policy</h1>
+            <p>How we protect and use your information</p>
+        </div>
+        
+        <div class="privacy-content">
+            <div class="privacy-section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to PupChat ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at privacy@pupchat.example.com.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key Point:</strong> This Privacy Policy applies to all information collected through our Services (which includes our website and mobile application), as well as any related services, sales, marketing or events.</p>
+                </div>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>2. Information We Collect</h2>
+                <p>We collect personal information that you voluntarily provide to us when you register on PupChat, express an interest in obtaining information about us or our products and Services, or otherwise when you contact us.</p>
+                
+                <p>The personal information we collect may include the following:</p>
+                <ul>
+                    <li><strong>Account Data:</strong> Name, email address, username, password, profile picture</li>
+                    <li><strong>Pet Information:</strong> Dog's name, breed, age, photos, health information you choose to share</li>
+                    <li><strong>Social Media Data:</strong> If you connect via social media, we may collect information from those accounts</li>
+                    <li><strong>Usage Data:</strong> Information about how you use our website and services</li>
+                    <li><strong>Technical Data:</strong> IP address, browser type, device information</li>
+                </ul>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use personal information collected via our Services for a variety of business purposes described below:</p>
+                <ul>
+                    <li>To facilitate account creation and logon process</li>
+                    <li>To provide and maintain our Service</li>
+                    <li>To manage your account and provide customer support</li>
+                    <li>To connect dog owners with similar interests or locations</li>
+                    <li>To send administrative information to you</li>
+                    <li>To protect our Services and prevent fraud</li>
+                    <li>To enforce our terms, conditions and policies</li>
+                    <li>For other business purposes such as data analysis, identifying usage trends, and improving our services</li>
+                </ul>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>4. Sharing Your Information</h2>
+                <p>We only share information with your consent, to comply with laws, to protect your rights, or to fulfill business obligations. We may share your information in the following situations:</p>
+                <ul>
+                    <li><strong>With Other Users:</strong> When you interact with other users through our Services, your profile information and content you post may be visible to others.</li>
+                    <li><strong>With Service Providers:</strong> We may share your data with third-party vendors who perform services for us.</li>
+                    <li><strong>Business Transfers:</strong> We may share or transfer your information in connection with a merger or sale of assets.</li>
+                    <li><strong>Legal Obligations:</strong> We may disclose your information where required by law.</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Note:</strong> We will never sell your personal information to third parties.</p>
+                </div>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>5. Cookies and Tracking Technologies</h2>
+                <p>We may use cookies and similar tracking technologies to access or store information. Most web browsers are set to accept cookies by default. You can choose to set your browser to remove or reject cookies, but this may affect certain features of our Services.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>6. Data Security</h2>
+                <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please remember that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>7. Data Retention</h2>
+                <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>8. Your Privacy Rights</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                <ul>
+                    <li>The right to access, update or delete your information</li>
+                    <li>The right to rectification if your information is inaccurate</li>
+                    <li>The right to object to our processing of your personal data</li>
+                    <li>The right to request restriction of processing your personal information</li>
+                    <li>The right to data portability</li>
+                    <li>The right to withdraw consent</li>
+                </ul>
+                <p>To exercise any of these rights, please contact us at privacy@pupchat.example.com.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>9. Children's Privacy</h2>
+                <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>10. Changes to This Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>11. Contact Us</h2>
+                <p>If you have questions or comments about this policy, you may contact our Data Protection Officer at:</p>
+                <p><strong>Email:</strong> privacy@pupchat.example.com</p>
+                <p><strong>Address:</strong> 123 Dog Park Avenue, Suite 100, Petsville, PV 12345</p>
+            </div>
+            
+            <p class="update-date">Last Updated: January 1, 2023</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <a href="index.php" class="footer-logo">
+                <i class="fas fa-paw"></i> PupChat
+            </a>
+            <div class="footer-links">
+                <a href="index.php">Home</a>
+                <a href="about.html">About</a>
+                <a href="tc.html">Terms</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">
+                &copy; 2023 PupChat. All rights reserved.<br>
+                Developed by <a href="#">Dev Divine Ema Asuquo</a> | Powered by <a href="https://dealabs.rf.gd" target="_blank">Dealabs</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple back to top button functionality
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.location.href = 'index.php';
+        });
+    </script>
+</body>
+</html>
