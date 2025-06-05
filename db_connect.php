@@ -1,8 +1,8 @@
 <?php
-$servername = "sql108.infinityfree.com";
-$username = "if0_38272387";
-$password = "pupchat1";
-$database = "if0_38272387_pupnot";
+$servername = "*****************";
+$username = "**********";
+$password = "*********";
+$database = "*****";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
